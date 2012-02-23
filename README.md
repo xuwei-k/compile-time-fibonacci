@@ -1,7 +1,9 @@
 # compile time fibonacci using scala macros
 
+### sbt output log
+
 ```
-$ sbt11
+$ sbt
 [info] Loading project definition from /Users/user/compile_time_fibonacci/project
 [info] Set current project to compile-time-fibonacci (in build file:/Users/user/compile_time_fibonacci/)
 > clean
@@ -28,3 +30,7 @@ fibonacci 38 = 39088169
 [success] Total time: 0 s, completed Feb 23, 2012 11:54:16 PM
 ```
 
+
+### decompiled source
+
+![decompiled](https://github.com/xuwei-k/compile-time-fibonacci/raw/master/decompiled.png)
