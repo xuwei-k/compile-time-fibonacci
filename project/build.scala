@@ -1,12 +1,10 @@
-import sbt._
-import Keys._
+import sbt._,Keys._
 
 object build extends Build{
   val buildSettings = Defaults.defaultSettings ++ Seq(
-    scalaVersion := "2.10.0-M2",
-    scalacOptions += "-Xmacros",
+    scalaVersion := "2.10.0-SNAPSHOT",
     resolvers ++= Seq(
-      "sonatype" at "https://oss.sonatype.org/content/repositories/releases"
+      "sonatype" at "https://oss.sonatype.org/content/repositories/snapshots"
     )
   )
 
