@@ -2,9 +2,9 @@ import sbt._,Keys._
 
 object build extends Build{
   val buildSettings = Defaults.defaultSettings ++ Seq(
-    scalaVersion := "2.10.0-SNAPSHOT",
+    scalaVersion := "2.10.0-M3",
     resolvers ++= Seq(
-      "sonatype" at "https://oss.sonatype.org/content/repositories/snapshots"
+      "sonatype" at "https://oss.sonatype.org/content/repositories/releases"
     )
   )
 
