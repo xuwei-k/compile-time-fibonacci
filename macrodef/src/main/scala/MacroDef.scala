@@ -1,7 +1,8 @@
 package compile_time_fibonacci
 
 import language.experimental.macros
-import scala.reflect.makro.Context
+import scala.reflect.makro._
+import scala.reflect.api._
 
 object MacroDef{
 
@@ -28,12 +29,12 @@ object MacroDef{
   def fibmacro(a:Int):Long = macro fibmacroImpl
 
   def fibmacroImpl(c:Context)(a:c.Expr[Int]):c.Expr[Long] = {
-    import c.mirror._
+    import c.universe._
     val Literal(Constant(i:Int)) = a.tree
     println("start compile time fibonacci calculate")
     val result = timer{ fib(i).longValue }
     println("finish compile time fibonacci calculate")
     println("fibonacci " + c + " = " + result)
-    Expr(Literal(Constant(result)))
+    c.Expr(Literal(Constant(result)))
   }
 }

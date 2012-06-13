@@ -2,7 +2,7 @@ import sbt._,Keys._
 
 object build extends Build{
   val buildSettings = Defaults.defaultSettings ++ Seq(
-    scalaVersion := "2.10.0-SNAPSHOT",
+    scalaVersion := "2.10.0-M4",
     resolvers ++= Seq(
       "sonatype" at "https://oss.sonatype.org/content/repositories/snapshots"
     )
@@ -17,7 +17,13 @@ object build extends Build{
   lazy val macrodef = Project(
     "macrodef",
     file("macrodef"),
-    settings = buildSettings
+    settings = buildSettings ++ Seq(
+      libraryDependencies <++= scalaVersion{ v =>
+        Seq(
+          "org.scala-lang" % "scala-reflect" % v
+        )
+      }
+    )
   )
 }
 
