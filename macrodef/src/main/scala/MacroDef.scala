@@ -2,7 +2,6 @@ package compile_time_fibonacci
 
 import language.experimental.macros
 import scala.reflect.makro._
-import scala.reflect.api._
 
 object MacroDef{
 
