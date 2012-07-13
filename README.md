@@ -1,4 +1,4 @@
-# compile time fibonacci using scala macros
+# compile time fibonacci using scala macros [![Build Status](https://secure.travis-ci.org/xuwei-k/compile-time-fibonacci.png)](http://travis-ci.org/xuwei-k/compile-time-fibonacci)
 
 ### sbt output log
 
@@ -24,7 +24,7 @@ finish compile time fibonacci calculate
 fibonacci 38 = 39088169
 [success] Total time: 19 s, completed Feb 23, 2012 11:54:13 PM
 > run
-[info] Running compile_time_fibonacci.Main 
+[info] Running compile_time_fibonacci.Main
 39088169
 1 mililis elapsed
 [success] Total time: 0 s, completed Feb 23, 2012 11:54:16 PM
