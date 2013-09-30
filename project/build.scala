@@ -2,7 +2,7 @@ import sbt._,Keys._
 
 object build extends Build{
   val buildSettings = Defaults.defaultSettings ++ Seq(
-    scalaVersion := "2.10.0",
+    scalaVersion := "2.10.3",
     resolvers ++= Seq(
       Opts.resolver.sonatypeReleases
     )
